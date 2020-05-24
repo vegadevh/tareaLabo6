@@ -2,6 +2,8 @@ package com.uca.capas.domain;
 
 import java.util.Date;
 
+//import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -50,11 +52,20 @@ public class Contribuyente {
 	@Column(name="s_nit")
 	private String s_nit;
 	
+	//Cambiar a String
 	@Temporal(TemporalType.DATE)
 	@Column(name="f_fecha_ingreso")
 	@DateTimeFormat(pattern="dd-MM-yyyy")
 	private Date f_fecha_ingreso;
 	
+	public Date getF_fecha_ingreso() {
+		return f_fecha_ingreso;
+	}
+
+	public void setF_fecha_ingreso(Date f_fecha_ingreso) {
+		this.f_fecha_ingreso = f_fecha_ingreso;
+	}
+
 	//contructor
 	public Contribuyente() {
 		
@@ -107,17 +118,5 @@ public class Contribuyente {
 	public void setS_nit(String s_nit) {
 		this.s_nit = s_nit;
 	}
-
-	public Date getF_fecha_ingreso() {
-		return f_fecha_ingreso;
-	}
-
-	public void setF_fecha_ingreso(Date f_fecha_ingreso) {
-		this.f_fecha_ingreso = f_fecha_ingreso;
-	}
-	
-	
-	
-	
 
 }

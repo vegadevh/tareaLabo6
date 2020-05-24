@@ -9,6 +9,7 @@ import javax.persistence.Query;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
+import com.uca.capas.domain.Contribuyente;
 import com.uca.capas.domain.Importancia;
 
 @Repository
@@ -25,6 +26,13 @@ public class ImportanciaDAOImpl implements ImportanciaDAO{
 		List<Importancia> resultSet = query.getResultList();
 		
 		return resultSet;
+	}
+
+	@Override
+	public Importancia findOne(Integer c_importancia) throws DataAccessException {
+		
+		Importancia importancia = entityManager.find(Importancia.class, c_importancia);
+		return importancia;
 	}
 
 }
