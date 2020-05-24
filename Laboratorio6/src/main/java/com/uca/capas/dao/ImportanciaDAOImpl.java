@@ -20,7 +20,7 @@ public class ImportanciaDAOImpl implements ImportanciaDAO{
 	@Override
 	public List<Importancia> findAll() throws DataAccessException {
 		StringBuffer sb = new StringBuffer();
-		sb.append("select * from public.contribuyente");
+		sb.append("select * from public.importancia");
 		Query query = entityManager.createNativeQuery(sb.toString(), Importancia.class);
 		List<Importancia> resultSet = query.getResultList();
 		

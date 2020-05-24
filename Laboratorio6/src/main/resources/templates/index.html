@@ -23,13 +23,14 @@
         <span th:errors="*{s_nit}" style="color: red;"></span>
         <br>
         <label for="importancia">Importancia: </label>
-        <select name="importancia" id="importancia" th:field="*{importancia}">
-            <option th:each="importancia: ${importancias}" th:value="${{importancia}}" th:text="${importancia.s_importancia}"></option>
+        <select name="importancia" id="importancia" th:field="*{c_importancia}">
+            <option th:each="importancia, row: ${importancias}" th:value="${importancia.c_importancia}" th:text="${importancia.s_importancia}"></option>
         </select>
         <br>
 
         <input type="submit" value="Guardar">
     </form>
+    <br>
     <form th:action="@{/listado}" method="POST">
         <input type="submit" value="Ver contribuyentes">
     </form>
