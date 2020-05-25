@@ -70,7 +70,7 @@ public class MainController {
 				e.printStackTrace();
 			}
 			contribuyente = new Contribuyente();
-			mav.addObject("contribuyente", contribuyente);
+			//mav.addObject("contribuyente", contribuyente);
 			mav.setViewName("exito");
 		}
 		

@@ -1,6 +1,5 @@
 package com.uca.capas.service;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -25,13 +24,11 @@ public class ContribuyenteServiceImpl implements ContribuyenteService{
 	@Override
 	@Transactional
 	public void insert(Contribuyente contribuyente) throws DataAccessException {
-		/*
+		
 		//Fecha
-		Date date = new Date();  
-	    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
-	    String f_fecha_ingreso = formatter.format(date);
+		
+		Date f_fecha_ingreso = new Date();
 		contribuyente.setF_fecha_ingreso(f_fecha_ingreso);
-		*/
 		//Asignar la importancia
 		//Al atributo importancia (c_importancia) se le pasa un entero obtenido por metodo findOne de ImportanciaService
 		contribuyente.setImportancia(importanciaService.findOne(contribuyente.getC_importancia()));

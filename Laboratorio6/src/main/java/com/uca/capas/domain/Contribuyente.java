@@ -52,10 +52,9 @@ public class Contribuyente {
 	@Column(name="s_nit")
 	private String s_nit;
 	
-	//Cambiar a String
 	@Temporal(TemporalType.DATE)
 	@Column(name="f_fecha_ingreso")
-	@DateTimeFormat(pattern="dd-MM-yyyy")
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date f_fecha_ingreso;
 	
 	public Date getF_fecha_ingreso() {
