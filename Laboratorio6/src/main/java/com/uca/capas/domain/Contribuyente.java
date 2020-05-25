@@ -1,5 +1,6 @@
 package com.uca.capas.domain;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 //import java.util.Date;
@@ -57,8 +58,9 @@ public class Contribuyente {
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date f_fecha_ingreso;
 	
-	public Date getF_fecha_ingreso() {
-		return f_fecha_ingreso;
+	public String getF_fecha_ingreso() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		return formatter.format(f_fecha_ingreso);
 	}
 
 	public void setF_fecha_ingreso(Date f_fecha_ingreso) {
